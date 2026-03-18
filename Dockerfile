@@ -2,7 +2,7 @@ FROM alpine
 
 RUN apk add gcc make git musl-dev
 
-WORKDIR /app
+WORKDIR /
 
 RUN make
 
