@@ -2,8 +2,10 @@ FROM alpine
 
 RUN apk add gcc make git musl-dev
 
-WORKDIR /
+WORKDIR /app
+
+COPY . .
 
 RUN make
 
-CMD ["./elevate","input8.txt", "--mode=dp" ]
+CMD ["./elevate/src/elevate", "input8.txt", "--mode=dp"]
